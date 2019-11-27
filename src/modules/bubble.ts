@@ -4,7 +4,7 @@ export class Bubble {
     private y: number = 10;
     private size: number = 10;
     private xSpeed: number = random(3, 0);
-    private ySpeed: number = random(2, 2);
+    private ySpeed: number = random(1, 1);
     private stopped: boolean = false;
     private color: string = '#FFFFFF80';
     private borderColor: string = 'white';
@@ -41,8 +41,6 @@ export class Bubble {
             this.y = this.ySpeed + this.y;
             this.doBorderBehavior();
         }
-        /* TODO REQUIRED - Make the bubbles move as long as they aren't stopped. Model after ball behavior. */
-        /* The doBorderBehavior is built in for you below. */
     }
 
     public distFromMouse(): number {
@@ -63,4 +61,3 @@ export class Bubble {
         }
     }
 }
-

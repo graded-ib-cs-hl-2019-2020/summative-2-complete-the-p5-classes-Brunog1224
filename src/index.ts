@@ -37,31 +37,31 @@ function setup() {
     let numBalls = 10;
     let numFlakes = 10;
     createCanvas(500, 500);
-    for (let i = 1; i < numBalls; i++) {
+    for (let i = 0; i < numBalls; i++) {
         balls[i] = new Ball(random(25, width - 25), random(25, height - 25), random(10, 50));
         /* TODO OPTIONAL - make the balls a random color */
     }
-    for (let i = 1; i < numBubbles; i++) {
+    for (let i = 0; i < numBubbles; i++) {
         bubbles[i] = new Bubble(random(25, width - 25), random(25, height - 25), random(10, 50));
         /* TODO REQUIRED - add the bubbles */
     }
-    for (let i = 1; i < numFlakes; i++) {
+    for (let i = 0; i < numFlakes; i++) {
         snowflakes[i] = new Snowflake(random(25, width - 25), random(25, height - 25), random(10, 50));
         /* TODO REQUIRED - add the snowflakes */
     }
 }
 
 function draw() {
-    background("skyblue");
-    for (let i = 0; i< balls.length; i++) {
+    background("skyblue ");
+    for (let i = 0; i < balls.length; i++) {
         balls[i].draw();
         balls[i].move();
     }
-    for (let i = 0; i< bubbles.length; i++) {
+    for (let i = 0; i < bubbles.length; i++) {
         bubbles[i].draw();
         bubbles[i].move();
     }
-    for (let i = 0; i< snowflakes.length; i++) {
+    for (let i = 0; i < snowflakes.length; i++) {
         snowflakes[i].draw();
         snowflakes[i].move();
     }
@@ -79,5 +79,5 @@ function draw() {
 window.draw = draw;
 window.setup = setup;
 window.mousePressed = mousePressed;
-window.mouseReleased = mouseReleased; 
+window.mouseReleased = mouseReleased;
 
